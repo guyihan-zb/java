@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>我的计算器</title>
+        <script>
+            function myck(type) {
+                var a = document.getElementById("num1");
+                var b = document.getElementById("num2");
+                if(type==1){
+                    if (a.value == "") {
+                        alert("请先输入数字1");
+                        return false;
+                    }
+                    if (b.value == "") {
+                        alert("请先输入数字2");
+                        return false;
+                    }
+                    var total = parseInt(a.value) + parseInt(b.value);
+                    document.getElementById("resultDiv").innerHTML =
+                        "<h2>最终执行结果：<strong style='color: red;'>" + total + "</strong></h2>";
+                }else if(type==2){
+                    a.value="";
+                    b.value="";
+                    document.getElementById("resultDiv").innerHTML="";
+                }
+            }
+        </script>
+    </head>
+<body>
+    <div style="text-align: center;margin-top: 100px;">
+        <h1>加法计算器</h1>
+        数字1<input id="num1" type="number"> <p></p>
+        数字1<input id="num2" type="number"> <p></p>
+        <div>
+            <input type="button" value=" 计 算 " onclick="myck(1)">
+            <input type="button" value=" 清 空 " onclick="myck(2)">
+        </div>
+        <div id="resultDiv" style="margin-top: 50px;">
+
+        </div>
+    </div>
+
+    <script>
+        // document.getElementById("resultDiv").innerText =
+        //     "<h1>我是计算的结果~</h1>";
+
+        // document.getElementById("resultDiv").innerHTML =
+        //     "<h1>我是计算的结果~</h1>";
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>自定义搜索</title>
+    <script>
+        function myck(type) {
+            var ifr=document.getElementById("ifr");
+            if(type==1){
+                ifr.setAttribute("src","https://www.baidu.com");
+            }
+            if(type==2){
+                ifr.setAttribute("src","https://www.sogou.com");
+            }
+            if(type==3){
+                ifr.setAttribute("src","https://www.so.com");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--<div style="height: 50px">
+        <input  type="button" value=" 百度一下 " onclick="myck('https://www.baidu.com')">
+        <input type="button" value=" 搜狗 " onclick="myck('https://www.sogou.com')">
+        <input type="button" value=" 360 " onclick="myck('https://www.so.com')">
+    </div>-->
+    <div style="height: 50px">
+        <input  type="button" value=" 百度一下 " onclick="myck(1)">
+        <input type="button" value=" 搜狗 " onclick="myck(2)">
+        <input type="button" value=" 360 " onclick="myck(3)">
+    </div>
+    <div>
+        <iframe id="ifr" style="width: 100%;height: 500px;"
+                src="https://www.baidu.com"></iframe>
+    </div>
+</body>
+</html>
